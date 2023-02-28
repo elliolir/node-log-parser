@@ -22,7 +22,7 @@ class ArgumentsService {
         },
         output: {
           type: 'string',
-          default: 'errors.json',
+          default: 'results.json',
           demandOption: true,
           description: 'Path to the generated JSON'
         },
