@@ -45,7 +45,8 @@ const argv = yargs(hideBin(process.argv))
 const { input, output, logLevels } = argv;
 
 const parseLine = (line: string): Log => {
-  const [timestamp, logLevel, logMessage] = line.split(' - ');
+  const [rawTimestamp, logLevel, logMessage] = line.split(' - ');
+  const timestamp = new Date(rawTimestamp).getTime();
   const message = JSON.parse(logMessage);
 
   return { timestamp, logLevel, ...message };
