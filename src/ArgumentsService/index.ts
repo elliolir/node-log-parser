@@ -18,20 +18,20 @@ class ArgumentsService {
           type: 'string',
           default: 'app.log',
           demandOption: true,
-          description: 'Path to the log file'
+          description: 'Provide the path to the raw log file'
         },
         output: {
           type: 'string',
           default: 'results.json',
           demandOption: true,
-          description: 'Path to the generated JSON'
+          description: 'Provide the path to the parsed output log file'
         },
         logLevels: {
           type: 'array',
           alias: 'l',
           choices: Object.values(Levels),
           default: [Levels.error],
-          description: 'Filter by log level'
+          description: 'Levels of the parsed output logs'
         }
       })
       .parseSync();
