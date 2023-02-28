@@ -1,6 +1,6 @@
 import yargs, { Arguments } from 'yargs';
 import { hideBin } from 'yargs/helpers';
-import Levels from './Levels';
+import Levels from '../types/Levels';
 
 interface Params {
   input: string;
