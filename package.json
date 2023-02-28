@@ -1,0 +1,29 @@
+{
+  "name": "log-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/parser.ts",
+    "lint": "prettier --check src",
+    "lint:fix": "prettier --write src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliolir/node-log-parser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.2",
+    "prettier": "^2.8.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "bugs": {
+    "url": "https://github.com/elliolir/node-log-parser/issues"
+  },
+  "homepage": "https://github.com/elliolir/node-log-parser#readme"
+}
