@@ -34,6 +34,7 @@ Options:
     
 Global options:
   --help                                      Display help for commands and options.
+  --version                                   Show version number
 ```
 
 ### Available commands
