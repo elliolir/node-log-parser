@@ -18,8 +18,7 @@ class LogSerializer extends BaseSerializer<Log> {
   deserialize(log: Log): string {
     try {
       return JSON.stringify(log);
-    }
-    catch (e) {
+    } catch (e) {
       console.error(e);
 
       return '';
