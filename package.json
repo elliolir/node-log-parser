@@ -4,7 +4,7 @@
   "description": "A Node.js + TypeScript logs parser",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/parser.ts --input ./app.log --output ./logs.json -l info warn ",
+    "start": "ts-node src/app.ts --input ./app.log --output ./logs.json -l info warn ",
     "lint": "prettier --check src",
     "lint:fix": "prettier --write src",
     "test": "echo \"Error: no test specified\" && exit 1"
