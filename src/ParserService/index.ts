@@ -6,7 +6,7 @@ import BaseSerializer from '../Serializers/BaseSerializer';
 type filterFunction<T> = (t: T) => boolean;
 
 class ParserService<T> {
-  serializer: BaseSerializer<T>;
+  private serializer: BaseSerializer<T>;
   constructor(serializer: BaseSerializer<T>) {
     this.serializer = serializer;
   }
@@ -38,7 +38,7 @@ class ParserService<T> {
         if (firstLine) firstLine = false;
       }
     }
-    outputFile.write('\n]');
+    outputFile.write(`${firstLine ? '' : '\n'}]`);
   }
 }
 
