@@ -40,4 +40,4 @@ Global options:
 * `npm start` — self-testing run of the CLI with the pre-defined parameters;
 * `npm run build` — build the standalone `dist/parser.js` so it can be run manually as a Node CLI;
 * `npm test` — runs `jest`-based unit tests;
-* `npm run lint` and `npm run lint:fix` — checks and fixes styling issues respectively;
+* `npm run prettier` and `npm run prettier:fix` — checks and fixes styling issues respectively.
