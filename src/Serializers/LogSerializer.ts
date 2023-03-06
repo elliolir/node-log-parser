@@ -2,9 +2,16 @@ import BaseSerializer from './BaseSerializer';
 import Log from '../types/Log';
 
 class LogSerializer extends BaseSerializer<Log> {
+  private linePattern = /^(\S+) - (\S+) - (.+)$/;
+
   serialize(line: string): Log | null {
     try {
-      const [rawTimestamp, loglevel, logMessage] = line.split(' - ');
+      const match = line.match(this.linePattern);
+      if (!match) {
+        throw new Error(`Invalid log line: ${line}`);
+      }
+
+      const [, rawTimestamp, loglevel, logMessage] = match;
       const timestamp = new Date(rawTimestamp).getTime();
       const message = JSON.parse(logMessage);
 
